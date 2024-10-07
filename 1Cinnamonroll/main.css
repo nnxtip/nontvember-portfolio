@@ -1,0 +1,66 @@
+h1{
+    background-color: rgb(219, 69, 69);
+    color: rgb(253, 245, 234);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h3{
+    background-color: rgb(219, 69, 69);
+    color: rgb(253, 245, 234);
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.CinnamonImage{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.TopImage{
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.IngreText{
+    display: flex;
+    background-color: rgba(153, 79, 79, 0.253);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#IngreImage{
+    height: 300px;
+    float: right;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+#BottomImage{
+    width: 70%;
+    border: 2px solid rgb(219, 69, 69);
+    border-radius: 10px;
+}
+.CinnamonBottomImage{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.BottomImage{
+    width: 400px;
+    border: 2px solid rgb(219, 69, 69);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.source{
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+}

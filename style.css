@@ -1,0 +1,548 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f4f4f4;
+}
+html {
+    scroll-snap-type: y mandatory; /* scroll snap แนวตั้ง */
+    overflow-y: scroll; 
+}
+body {
+    margin: 0;
+}
+/* Ref https://www.youtube.com/watch?v=MsmvhpBXosM */
+
+
+
+
+/* NavBar */
+nav.bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #19181a;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+nav.bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+nav.bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s; /* เพิ่ม transition สำหรับสี */
+}
+nav.bar ul li a:hover {
+    background-color: #2c2b2e; /* สีพื้นหลังเมื่อชี้เมาส์ */
+    color: rgb(224, 73, 85); /* เปลี่ยนสีข้อความเป็นสีแดงเมื่อชี้เมาส์ */
+    border-radius: 5px;
+}
+/* Ref https://www.youtube.com/watch?v=oLgtucwjVII */
+
+
+
+
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px; 
+}
+#about .profile-image {
+    flex: 1;
+    text-align: center;
+}
+#about .profile-image img {
+    width: 400px; 
+    height: 400px; 
+    border-radius: 50%; 
+}
+#about .content {
+    flex: 1; 
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+#about .signature-image {
+    width: 200px; 
+    height: 100px;
+    display: block;
+    margin-top: 40px;
+    margin-right: auto;
+}
+
+
+
+
+
+/* Section Styling */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 78vh; /* ความสูงของแต่ละ section */
+    scroll-snap-align: start; /* ล็อคที่ด้านบนของ section */
+}
+#home {
+    height: 78.6vh;
+    background: url('me.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.intro {
+    text-align: left;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    margin-top: 50px;
+    transform: translateY(-50%);
+}
+h1 {
+    font-size: 64px;
+    margin: 0;
+    color: #f4f4f4;
+}
+.tagline {
+    font-size: 32px;
+    margin-top: 10px;
+    color: #f4f4f4;
+    font-weight: 300;
+}
+
+
+
+
+
+/* Skills Section */
+.skills-container {
+    display: flex; 
+    align-items: center; 
+}
+.logo-container {
+    flex: 1; 
+    text-align: center; 
+}
+.skills-list {
+    flex: 1; 
+    text-align: left; 
+}
+.logo-image {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+}
+.skill-item {
+    background-color: #fff;
+    padding: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เงา */
+    margin-bottom: 20px;
+}
+.skill-item h3 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    margin-left: 15px;
+}
+.skill-item p {
+    font-size: 16px; 
+    color: #777;
+    margin-left: 30px;
+}
+
+
+
+
+
+/* Interests Section */
+.interest-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.interest-image {
+    width: 100%;
+    max-width: 900px; 
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* เงา */
+    object-fit: cover; 
+    border-radius: 20px;
+}
+
+
+
+
+
+/* Artwork Section */
+.artwork {
+    display: grid; /* ใช้ Grid Layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
+    gap: 20px;
+    justify-items: center; /* จัดรูปให้อยู่กลางในแต่ละคอลัมน์ */
+}
+.artwork-image {
+    width: 450px; 
+    height: 350px; 
+    object-fit: cover; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* เงา */
+    border-radius: 20px;
+}
+
+
+
+
+
+/* Project Section */
+#project {
+    padding: 50px;
+    min-height: 78vh; 
+    display: flex; 
+    flex-direction: column; /* เนื้อหาแนวตั้ง */
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+#project h2 {
+    margin-bottom: 30px; 
+    font-size: 36px; 
+    text-align: center; 
+}
+.project-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    max-width: 900px; 
+    text-align: center;
+}
+.project-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.project-button:hover {
+    background-color: #38363a;
+}
+
+
+
+
+/* Project.html */
+/* Fade Screen */
+#fade-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    opacity: 1; 
+    z-index: 100; 
+}
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* NavBar */
+nav.Bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #19181a;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+nav.Bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+nav.Bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+nav.Bar ul li a:hover {
+    background-color: #2c2b2e; /* สีพื้นหลังเมื่อชี้เมาส์ */
+    color: rgb(224, 73, 85); /* เปลี่ยนสีข้อความเป็นสีแดงเมื่อชี้เมาส์ */
+}
+/* Project Section */
+.project-page section {
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh; 
+}
+.project-page h2 {
+    margin-bottom: 30px; 
+    font-size: 36px;
+    margin-top: 80px;
+}
+/* Project Image */
+.project-image {
+    width: 900px;
+    height: 450px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* เงา */
+    object-fit: cover; 
+    border-radius: 20px;
+}
+/* Project Section */
+.project-page .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+.project-page .project-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+.project-page .project-button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+/* Assignment Section */
+#assignment {
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.assignment-list {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+}
+.assignment-item {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เงา */
+    width: 200px;
+    text-align: center;
+}
+.assignment-item a {
+    text-decoration: none; /* ลบเส้นใต้ */
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.assignment-item a:hover {
+    background-color: #2c2b2e;
+    color: #e04955;
+    border-radius: 15px;
+}
+
+
+
+
+
+/* Contact Section */
+#contact {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 78vh; 
+    padding: 50px; 
+}
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.left-column, .right-column {
+    flex: 1;
+    text-align: center; 
+}
+.right-column {
+    text-align: left; 
+}
+
+
+
+
+
+/* Social Links */
+.social-links {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+.social-links li {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+.social-logo {
+    width: 80px; 
+    height: 80px; 
+    margin-right: 10px; 
+}
+.social-links a {
+    color: #333;
+    text-decoration: none; 
+    font-size: 20px; 
+}
+
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #19181a;
+    color: white;
+}
+
+
+
+
+
+/* Responsive Design */
+/* iPhone (แนวตั้งและแนวนอน) */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 36px;
+    }
+    /* Section About */
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+    #about .profile-image {
+        order: 1;
+    }
+    #about .profile-image img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    #about .content {
+        order: 2;
+        text-align: center;
+    }
+    #about h2 {
+        font-size: 24px;
+    }
+    #about p {
+        font-size: 16px;
+    }
+    .interest-image {
+        max-width: 100%;
+        height: auto;
+    }
+    .tagline {
+        font-size: 18px;
+    }
+    .skills-list, .artwork {
+        grid-template-columns: 1fr;
+    }
+    .skills-container, .contact-container {
+        flex-direction: column;
+    }
+    .assignment-list {
+        grid-template-columns: 1fr;
+    }
+    .social-links li {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* iPad (แนวตั้งและแนวนอน) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+    .interest-image {
+        max-width: 80%;
+        height: auto;
+    }
+    .skills-list, .artwork {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .logo-image {
+        width: 300px;
+        height: 300px;
+    }
+    .social-links li {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* คอมพิวเตอร์ (หน้าจอขนาดใหญ่) */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 64px;
+    }
+    .interest-image {
+        max-width: 900px;
+        height: auto;
+    }
+    .skills-list, .artwork {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .logo-image {
+        width: 400px;
+        height: 400px;
+    }
+    .assignment-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .social-links li {
+        flex-direction: row;
+    }
+}
+
