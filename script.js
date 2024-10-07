@@ -1,15 +1,19 @@
 document.querySelectorAll('nav.Bar a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetSection = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
 
-        targetSection.scrollIntoView({
-            behavior: 'smooth', 
-            block: 'start' 
-        });
+        if (href === "index.html") {
+            window.location.href = href;
+        } else {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            targetSection.scrollIntoView({
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
     });
 });
-
 
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-up');

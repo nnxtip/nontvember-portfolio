@@ -299,6 +299,7 @@ nav.Bar ul li a {
 nav.Bar ul li a:hover {
     background-color: #2c2b2e; /* สีพื้นหลังเมื่อชี้เมาส์ */
     color: rgb(224, 73, 85); /* เปลี่ยนสีข้อความเป็นสีแดงเมื่อชี้เมาส์ */
+    border-radius: 10px;
 }
 /* Project Section */
 .project-page section {
@@ -313,11 +314,11 @@ nav.Bar ul li a:hover {
 }
 /* Project Image */
 .project-image {
-    width: 900px;
-    height: 450px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* เงา */
-    object-fit: cover; 
-    border-radius: 20px;
+    width: 100%; 
+    max-width: 900px; 
+    height: auto; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px; 
 }
 /* Project Section */
 .project-page .project-container {
