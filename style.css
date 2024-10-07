@@ -95,15 +95,15 @@ nav.bar ul li a:hover {
 section {
     padding: 100px 20px;
     text-align: center;
-    min-height: 78vh; /* ความสูงของแต่ละ section */
-    scroll-snap-align: start; /* ล็อคที่ด้านบนของ section */
+    min-height: 78vh;
+    scroll-snap-align: start;
 }
 #home {
     height: 78.6vh;
     background: url('me.png') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover; 
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -449,7 +449,7 @@ footer {
 
 
 /* Responsive Design */
-/* iPhone (แนวตั้งและแนวนอน) */
+/* iPhone */
 @media (max-width: 767px) {
     h1 {
         font-size: 36px;
@@ -499,7 +499,7 @@ footer {
     }
 }
 
-/* iPad (แนวตั้งและแนวนอน) */
+/* iPad */
 @media (min-width: 768px) and (max-width: 1024px) {
     h1 {
         font-size: 48px;
@@ -522,7 +522,7 @@ footer {
     }
 }
 
-/* คอมพิวเตอร์ (หน้าจอขนาดใหญ่) */
+/* PC */
 @media (min-width: 1025px) {
     h1 {
         font-size: 64px;
