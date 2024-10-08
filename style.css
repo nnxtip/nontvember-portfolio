@@ -105,6 +105,7 @@ section {
     scroll-snap-align: start;
 }
 #home {
+    height: auto;
     background: url('me.png') no-repeat center center fixed;
     background-size: cover; 
     display: flex;
@@ -112,12 +113,6 @@ section {
     align-items: center;
     position: relative;
     z-index: 1;
-    height: auto; /* ใช้ auto เพื่อให้ไม่มีความสูงที่กำหนด */
-    min-height: 78vh; /* ความสูงขั้นต่ำ */
-}
-.intro img {
-    max-width: 100%; /* ให้ขนาดรูปใหญ่สุดที่ 100% ของขนาด parent */
-    height: auto; /* เพื่อให้รักษาสัดส่วน */
 }
 .intro {
     text-align: left;
@@ -484,9 +479,6 @@ footer {
 @media (max-width: 767px) {
     h1 {
         font-size: 36px;
-    }
-    #home {
-        min-height: 60vh; /* ปรับความสูงขั้นต่ำสำหรับมือถือ */
     }
     /* Section About */
     #about {
