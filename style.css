@@ -72,6 +72,12 @@ nav.bar ul li a:hover {
     width: 400px; 
     height: 400px; 
     border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* เงา */
+    transition: 0.5s;
+}
+#about .profile-image:hover img {
+    transform: scale(1.1);
+    z-index: 2;
 }
 #about .content {
     flex: 1; 
@@ -99,7 +105,7 @@ section {
     scroll-snap-align: start;
 }
 #home {
-    height: 78.6vh;
+    height: auto;
     background: url('me.png') no-repeat center center fixed;
     background-size: cover; 
     display: flex;
@@ -148,7 +154,11 @@ h1 {
 .logo-image {
     width: 400px; 
     height: 400px; 
-    object-fit: cover; 
+    transition: 0.5s;
+}
+.logo-image:hover {
+    transform: scale(1.1);
+    z-index: 2;
 }
 .skill-item {
     background-color: #fff;
@@ -183,6 +193,11 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* เงา */
     object-fit: cover; 
     border-radius: 20px;
+    transition: 0.5s;
+}
+.interest-image:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 
@@ -202,6 +217,11 @@ h1 {
     object-fit: cover; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* เงา */
     border-radius: 20px;
+    transition: 0.5s;
+}
+.artwork-image:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 
@@ -319,6 +339,11 @@ nav.Bar ul li a:hover {
     height: auto; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 20px; 
+    transition: 0.5s;
+}
+.project-image:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }
 /* Project Section */
 .project-page .project-container {
